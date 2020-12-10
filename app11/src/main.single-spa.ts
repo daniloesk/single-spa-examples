@@ -1,9 +1,9 @@
-import { enableProdMode, NgZone } from '@angular/core';
+import { ApplicationRef, enableProdMode, } from '@angular/core';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Router, NavigationStart } from '@angular/router';
 
-import { singleSpaAngular, getSingleSpaExtraProviders } from 'single-spa-angular';
+import { singleSpaAngular, } from 'single-spa-angular';
 
 
 import { AppModule } from './app/app.module';
@@ -15,14 +15,27 @@ if (environment.production) {
 }
 
 const lifecycles = singleSpaAngular({
-  bootstrapFunction: singleSpaProps => {
+  // https://single-spa.js.org/docs/ecosystem-angular#routing-in-zone-less-applications
+  bootstrapFunction: async singleSpaProps => {
     singleSpaPropsSubject.next(singleSpaProps);
-    return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
+    const ngModuleRef = await platformBrowserDynamic().bootstrapModule(
+      AppModule,
+      { ngZone: 'noop' },
+    );
+
+    const appRef = ngModuleRef.injector.get(ApplicationRef);
+    const listener = () => appRef.tick();
+    window.addEventListener('popstate', listener);
+
+    ngModuleRef.onDestroy(() => {
+      window.removeEventListener('popstate', listener);
+    });
+    return ngModuleRef;
   },
   template: '<app11-root />',
   Router,
   NavigationStart,
-  NgZone,
+  NgZone: 'noop',
 });
 
 export const bootstrap = lifecycles.bootstrap;
