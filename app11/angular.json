@@ -61,7 +61,7 @@
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
               "libraryName": "app11",
-              "libraryTarget": "umd"
+              "libraryTarget": "system"
             }
           },
           "configurations": {
