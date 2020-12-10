@@ -34,7 +34,15 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js"
+        "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs.min.js",
+        "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs-operators.min.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
+        "single-spa-angular": "https://cdn.jsdelivr.net/npm/single-spa-angular@4.9.1/bundles/single-spa-angular.umd.min.js",
+        "single-spa-angular/internals": "https://cdn.jsdelivr.net/npm/single-spa-angular@4.9.1/bundles/single-spa-angular-internals.umd.js",
+        "@angular/core": "https://cdn.jsdelivr.net/npm/@angular/core@11.0.4/bundles/core.umd.js",
+        "@angular/common": "https://cdn.jsdelivr.net/npm/@angular/common@11.0.4/bundles/common.umd.min.js",
+        "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@angular/platform-browser@11.0.4/bundles/platform-browser.umd.min.js",
+        "@angular/router": "https://cdn.jsdelivr.net/npm/@angular/router@11.0.4/bundles/router.umd.min.js"
       }
     }
   </script>

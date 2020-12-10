@@ -11,7 +11,11 @@ import { environment } from './environments/environment';
 import { singleSpaPropsSubject } from './single-spa/single-spa-props';
 
 if (environment.production) {
-  enableProdMode();
+  try {
+    enableProdMode();
+  } catch (exception) {
+    // Prod/dev mode already defined
+  }
 }
 
 const lifecycles = singleSpaAngular({
