@@ -48,6 +48,7 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@myorg/app11": "//localhost:4200/main.js",
         "@myorg/root-config": "//localhost:9000/myorg-root-config.js"
       }
     }
@@ -87,6 +88,9 @@
       <main>
         <route default>
           <application name="@single-spa/welcome"></application>
+        </route>
+        <route path="app11">
+          <application name="@myorg/app11"></application>
         </route>
       </main>
     </single-spa-router>
