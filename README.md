@@ -16,6 +16,7 @@ This repository is:
 * A guide to help you get started and see what I got right (or wrong)
 * Usually following the recommended setup and best practices
 * A laboratory to experiment on solutions
+* Currently focused on Angular and single-spa-angular
 
 Each building block or scenario is placed on a different branch.
 
