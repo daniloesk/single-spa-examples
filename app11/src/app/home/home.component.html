@@ -1,0 +1,13 @@
+<h2>Home</h2>
+<div>
+  <label>Style URL</label>
+  <div class="loading-image"></div>
+</div>
+<div>
+  <label>Code URL</label>
+  <img class="loading" [src]="url" />
+</div>
+<div>
+  <label>Template URL</label>
+  <img class="loading" [src]="'template-loader.gif' | assetUrl" />
+</div>

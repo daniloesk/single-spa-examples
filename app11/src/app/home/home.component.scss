@@ -1,0 +1,17 @@
+$size: 32px;
+
+label {
+  display: inline-block;
+  width: 10em;
+}
+.loading {
+  border: 1px solid grey;
+  display: inline-block;
+  vertical-align: middle;
+  width: $size;
+  height: $size;
+}
+.loading-image {
+  @extend .loading;
+  background-image: url(../../assets/style-loader.gif);
+}
