@@ -56,6 +56,8 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@myorg/app10a": "//localhost:4202/main.js",
+        "@myorg/app10b": "//localhost:4203/main.js",
         "@myorg/app11": "//localhost:4200/main.js",
         "@myorg/app11b": "//localhost:4201/main.js",
         "@myorg/root-config": "//localhost:9000/myorg-root-config.js"
@@ -97,6 +99,12 @@
       <main>
         <route default>
           <application name="@single-spa/welcome"></application>
+        </route>
+        <route path="app10a">
+          <application name="@myorg/app10a"></application>
+        </route>
+        <route path="app10b">
+          <application name="@myorg/app10b"></application>
         </route>
         <route path="app11">
           <application name="@myorg/app11"></application>

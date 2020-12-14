@@ -7,10 +7,15 @@ import { Component, VERSION } from '@angular/core';
       <h1>{{title}}</h1>
       <div>Angular {{ ngVersion.full }}</div>
       <div>
-        [<a routerLink="app11b">11B</a>]
         [<a routerLink="app11">Home</a>]
         [<a routerLink="app11/hello">Hello</a>]
         [<a routerLink="app11/lazy">Lazy</a>]
+      </div>
+      <div>
+        [ <a routerLink="/app10a">App10A</a> |
+        <a routerLink="/app10b">App10B</a> |
+        App11 |
+        <a routerLink="/app11b">App11B</a> ]
       </div>
 
       <router-outlet></router-outlet>
