@@ -1,5 +1,5 @@
 {
-  "name": "app11",
+  "name": "app11b",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:single-spa:app11": "ng build app11 --prod --deploy-url http://localhost:4200/",
-    "serve:single-spa:app11": "ng s --prod --project app11 --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
+    "build:single-spa:app11b": "ng build app11b --prod --deploy-url http://localhost:4201/",
+    "serve:single-spa:app11b": "ng s --prod --project app11b --disable-host-check --port 4201 --deploy-url http://localhost:4201/ --live-reload false"
   },
   "private": true,
   "dependencies": {

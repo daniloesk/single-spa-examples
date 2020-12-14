@@ -1,24 +1,17 @@
 import { Component, VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app11-root',
+  selector: 'app11b-root',
   template: `
     <div class="root">
       <h1>{{title}}</h1>
       <div>Angular {{ ngVersion.full }}</div>
-      <div>
-        [<a routerLink="app11b">11B</a>]
-        [<a routerLink="app11">Home</a>]
-        [<a routerLink="app11/hello">Hello</a>]
-        [<a routerLink="app11/lazy">Lazy</a>]
-      </div>
-
       <router-outlet></router-outlet>
     </div>
   `,
   styles: [ `
     .root {
-      border: 1px solid red;
+      border: 1px solid blue;
       padding: 1em;
     }
     router-outlet {
@@ -27,6 +20,6 @@ import { Component, VERSION } from '@angular/core';
   ` ],
 })
 export class AppComponent {
-  title = 'app11';
+  title = 'app11b';
   ngVersion = VERSION;
 }
