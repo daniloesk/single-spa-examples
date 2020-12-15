@@ -34,15 +34,29 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs.min.js",
-        "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs-operators.min.js",
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
-        "single-spa-angular": "https://cdn.jsdelivr.net/npm/single-spa-angular@4.9.1/bundles/single-spa-angular.umd.min.js",
-        "single-spa-angular/internals": "https://cdn.jsdelivr.net/npm/single-spa-angular@4.9.1/bundles/single-spa-angular-internals.umd.js",
-        "@angular/core": "https://cdn.jsdelivr.net/npm/@angular/core@11.0.4/bundles/core.umd.js",
-        "@angular/common": "https://cdn.jsdelivr.net/npm/@angular/common@11.0.4/bundles/common.umd.min.js",
-        "@angular/platform-browser": "https://cdn.jsdelivr.net/npm/@angular/platform-browser@11.0.4/bundles/platform-browser.umd.min.js",
-        "@angular/router": "https://cdn.jsdelivr.net/npm/@angular/router@11.0.4/bundles/router.umd.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js"
+      },
+      "scopes": {
+        "//localhost:3000/angular10/": {
+          "rxjs": "//localhost:3000/angular10/shared/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs.min.js",
+          "rxjs/operators": "//localhost:3000/angular10/shared/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs-operators.min.js",
+          "single-spa-angular": "//localhost:3000/angular10/shared/npm/single-spa-angular@4.9.1/bundles/single-spa-angular.umd.min.js",
+          "single-spa-angular/internals": "//localhost:3000/angular10/shared/npm/single-spa-angular@4.9.1/bundles/single-spa-angular-internals.umd.js",
+          "@angular/common": "//localhost:3000/angular10/shared/npm/@angular/common@10.2.3/bundles/common.umd.min.js",
+          "@angular/core": "//localhost:3000/angular10/shared/npm/@angular/core@10.2.3/bundles/core.umd.min.js",
+          "@angular/platform-browser": "//localhost:3000/angular10/shared/npm/@angular/platform-browser@10.2.3/bundles/platform-browser.umd.min.js",
+          "@angular/router": "//localhost:3000/angular10/shared/npm/@angular/router@10.2.3/bundles/router.umd.min.js"
+        },
+        "//localhost:3000/angular11/": {
+          "rxjs": "//localhost:3000/angular11/shared/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs.min.js",
+          "rxjs/operators": "//localhost:3000/angular11/shared/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs-operators.min.js",
+          "single-spa-angular": "//localhost:3000/angular11/shared/npm/single-spa-angular@4.9.1/bundles/single-spa-angular.umd.min.js",
+          "single-spa-angular/internals": "//localhost:3000/angular11/shared/npm/single-spa-angular@4.9.1/bundles/single-spa-angular-internals.umd.js",
+          "@angular/common": "//localhost:3000/angular11/shared/npm/@angular/common@11.0.4/bundles/common.umd.min.js",
+          "@angular/core": "//localhost:3000/angular11/shared/npm/@angular/core@11.0.4/bundles/core.umd.js",
+          "@angular/platform-browser": "//localhost:3000/angular11/shared/npm/@angular/platform-browser@11.0.4/bundles/platform-browser.umd.min.js",
+          "@angular/router": "//localhost:3000/angular11/shared/npm/@angular/router@11.0.4/bundles/router.umd.min.js"
+        }
       }
     }
   </script>
@@ -56,10 +70,10 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@myorg/app10a": "//localhost:4202/main.js",
-        "@myorg/app10b": "//localhost:4203/main.js",
-        "@myorg/app11": "//localhost:4200/main.js",
-        "@myorg/app11b": "//localhost:4201/main.js",
+        "@myorg/app10a": "//localhost:3000/angular10/app10a/main.js",
+        "@myorg/app10b": "//localhost:3000/angular10/app10b/main.js",
+        "@myorg/app11": "//localhost:3000/angular11/app11/main.js",
+        "@myorg/app11b": "//localhost:3000/angular11/app11b/main.js",
         "@myorg/root-config": "//localhost:9000/myorg-root-config.js"
       }
     }
