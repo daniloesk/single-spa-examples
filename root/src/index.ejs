@@ -34,7 +34,11 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
+        "@angular/common": "//localhost:4201/angular_common.js",
+        "@angular/core": "//localhost:4201/angular_core.js",
+        "@angular/platform-browser": "//localhost:4201/angular_platform-browser.js",
+        "@angular/router": "//localhost:4201/angular_router.js"
       }
     }
   </script>
@@ -54,6 +58,8 @@
     }
   </script>
   <% } %>
+
+  <script src="http://localhost:4201/runtime.js"></script>
 
   <!--
     For Angular applications, ensure only one instance of ZoneJS is loaded.
