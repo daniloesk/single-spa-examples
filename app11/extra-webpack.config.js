@@ -4,6 +4,9 @@ const SystemJSPublicPathWebpackPlugin = require("systemjs-webpack-interop/System
 module.exports = (config, options) => {
   const singleSpaWebpackConfig = singleSpaAngularWebpack(config, options);
 
+  // jsonpFunction removed on webpack 5
+  delete singleSpaWebpackConfig.output.jsonpFunction;
+
   singleSpaWebpackConfig.plugins.push(new SystemJSPublicPathWebpackPlugin({
     // ONLY NEEDED FOR WEBPACK 1-4. Not necessary for webpack@5
     systemjsModuleName: "@myorg/app11"

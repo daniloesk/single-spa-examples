@@ -4,6 +4,9 @@ const singleSpaAngularWebpack = require('single-spa-angular/lib/webpack').defaul
 module.exports = (config, options) => {
   const singleSpaWebpackConfig = singleSpaAngularWebpack(config, options);
 
+  // jsonpFunction removed on webpack 5
+  delete singleSpaWebpackConfig.output.jsonpFunction;
+
   singleSpaWebpackConfig.entry = { ...config.entry, ...{
     angular_common: '@angular/common',
     angular_core: '@angular/core',
