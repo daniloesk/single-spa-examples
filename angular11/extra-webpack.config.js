@@ -12,6 +12,10 @@ module.exports = (config, options) => {
     angular_core: '@angular/core',
     'angular_platform-browser': '@angular/platform-browser',
     angular_router: '@angular/router',
+    rxjs: 'rxjs',
+    'rxjs_operators': 'rxjs/operators',
+    'single-spa': 'single-spa',
+    'single-spa-angular': 'single-spa-angular',
   };
   console.log(`entry: ${inspect(singleSpaWebpackConfig.entry, { depth: 10, })}`);
 

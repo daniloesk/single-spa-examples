@@ -13,6 +13,10 @@ module.exports = (config, options) => {
   }));
 
   singleSpaWebpackConfig.externals.push(
+    'rxjs',
+    'rxjs/operators',
+    'single-spa',
+    'single-spa-angular',
     /^@angular\/.*/
   );
 
