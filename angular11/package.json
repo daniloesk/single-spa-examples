@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:single-spa:angular11": "ng build angular11 --prod --deploy-url http://localhost:4201/",
+    "build:single-spa:angular11": "ng build angular11 --prod --deploy-url http://localhost:4201/ --stats-json",
     "serve:single-spa:angular11": "ng s --project angular11 --disable-host-check --port 4201 --deploy-url http://localhost:4201/ --live-reload false"
   },
   "private": true,
