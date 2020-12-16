@@ -7,12 +7,12 @@ module.exports = (config, options) => {
   // jsonpFunction removed on webpack 5
   delete singleSpaWebpackConfig.output.jsonpFunction;
 
-  singleSpaWebpackConfig.entry = { ...config.entry, ...{
+  singleSpaWebpackConfig.entry = {
     angular_common: '@angular/common',
     angular_core: '@angular/core',
     'angular_platform-browser': '@angular/platform-browser',
     angular_router: '@angular/router',
-  }};
+  };
   console.log(`entry: ${inspect(singleSpaWebpackConfig.entry, { depth: 10, })}`);
 
   singleSpaWebpackConfig.optimization.runtimeChunk = 'single';
