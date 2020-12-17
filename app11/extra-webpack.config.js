@@ -9,6 +9,15 @@ module.exports = (config, options) => {
     systemjsModuleName: "@myorg/app11"
   }));
 
-  // Feel free to modify this webpack config however you'd like to
+  singleSpaWebpackConfig.externals.push(
+    'rxjs',
+    'rxjs/operators',
+    'single-spa',
+    'single-spa-angular',
+    '@angular/common',
+    '@angular/core',
+    '@angular/platform-browser',
+  );
+
   return singleSpaWebpackConfig;
 };
