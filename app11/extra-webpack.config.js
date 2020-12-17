@@ -14,9 +14,7 @@ module.exports = (config, options) => {
     'rxjs/operators',
     'single-spa',
     'single-spa-angular',
-    '@angular/common',
-    '@angular/core',
-    '@angular/platform-browser',
+    /^@angular\/.*/,
   );
 
   return singleSpaWebpackConfig;
