@@ -3,6 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "angular-common": {
+      "projectType": "application",
+      "root": "projects/angular-common",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "../proxy/public/angular11/angular-common",
+            "index": "projects/index.html",
+            "main": "projects/main.ts",
+            "tsConfig": "projects/tsconfig.app.json",
+            "aot": true,
+            "customWebpackConfig": {
+              "path": "projects/angular-common/extra-webpack.config.js",
+              "libraryName": "angular-common",
+              "libraryTarget": "system"
+            }
+          },
+          "configurations": {
+            "production": {
+              "index": "",
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        }
+      }
+    },
     "angular-core": {
       "projectType": "application",
       "root": "projects/angular-core",
@@ -28,7 +61,106 @@
               "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        }
+      }
+    },
+    "angular-platform-browser": {
+      "projectType": "application",
+      "root": "projects/angular-platform-browser",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "../proxy/public/angular11/angular-platform-browser",
+            "index": "projects/index.html",
+            "main": "projects/main.ts",
+            "tsConfig": "projects/tsconfig.app.json",
+            "aot": true,
+            "customWebpackConfig": {
+              "path": "projects/angular-platform-browser/extra-webpack.config.js",
+              "libraryName": "angular-platform-browser",
+              "libraryTarget": "system"
+            }
+          },
+          "configurations": {
+            "production": {
+              "index": "",
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        }
+      }
+    },
+    "angular-router": {
+      "projectType": "application",
+      "root": "projects/angular-router",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "../proxy/public/angular11/angular-router",
+            "index": "projects/index.html",
+            "main": "projects/main.ts",
+            "tsConfig": "projects/tsconfig.app.json",
+            "aot": true,
+            "customWebpackConfig": {
+              "path": "projects/angular-router/extra-webpack.config.js",
+              "libraryName": "angular-router",
+              "libraryTarget": "system"
+            }
+          },
+          "configurations": {
+            "production": {
+              "index": "",
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        }
+      }
+    },
+    "single-spa-angular": {
+      "projectType": "application",
+      "root": "projects/single-spa-angular",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "../proxy/public/angular11/single-spa-angular",
+            "index": "projects/index.html",
+            "main": "projects/main.ts",
+            "tsConfig": "projects/tsconfig.app.json",
+            "aot": true,
+            "customWebpackConfig": {
+              "path": "projects/single-spa-angular/extra-webpack.config.js",
+              "libraryName": "single-spa-angular",
+              "libraryTarget": "system"
+            }
+          },
+          "configurations": {
+            "production": {
+              "index": "",
+              "optimization": true,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
             }
