@@ -60,7 +60,7 @@
             "customWebpackConfig": {
               "path": "projects/angular-core/extra-webpack.config.js",
               "libraryName": "angular-core",
-              "libraryTarget": "umd"
+              "libraryTarget": "system"
             }
           },
           "configurations": {
