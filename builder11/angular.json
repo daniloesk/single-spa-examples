@@ -5,58 +5,16 @@
   "projects": {
     "angular-core": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:module": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        },
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
       "root": "projects/angular-core",
-      "sourceRoot": "projects/angular-core/src",
-      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "../proxy/public/angular11/angular-core",
-            "index": "projects/angular-core/src/index.html",
-            "main": "projects/angular-core/src/main.single-spa.ts",
-            "polyfills": "projects/angular-core/src/polyfills.ts",
-            "tsConfig": "projects/angular-core/tsconfig.app.json",
+            "index": "projects/index.html",
+            "main": "projects/main.ts",
+            "tsConfig": "projects/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/angular-core/src/favicon.ico",
-              "projects/angular-core/src/assets"
-            ],
-            "styles": [
-              "projects/angular-core/src/styles.css"
-            ],
-            "scripts": [],
             "customWebpackConfig": {
               "path": "projects/angular-core/extra-webpack.config.js",
               "libraryName": "angular-core",
@@ -65,53 +23,18 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/angular-core/src/environments/environment.ts",
-                  "with": "projects/angular-core/src/environments/environment.prod.ts"
-                }
-              ],
+              "index": "",
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": false,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ]
+              "buildOptimizer": true
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "browserTarget": "angular-core:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "angular-core:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "angular-core:build"
           }
         }
       }
     }
-  },
-  "defaultProject": "angular-core"
+  }
 }

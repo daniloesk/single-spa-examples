@@ -6,9 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "build:single-spa:angular-core": "ng build angular-core --prod --deploy-url http://localhost:4200/",
-    "serve:single-spa:angular-core": "ng s --project angular-core --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
