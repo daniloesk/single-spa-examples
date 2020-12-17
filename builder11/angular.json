@@ -43,7 +43,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/angular-core",
+            "outputPath": "../proxy/public/angular11/angular-core",
             "index": "projects/angular-core/src/index.html",
             "main": "projects/angular-core/src/main.single-spa.ts",
             "polyfills": "projects/angular-core/src/polyfills.ts",
@@ -75,7 +75,7 @@
               "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
+              "extractLicenses": false,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
